@@ -1,27 +1,272 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+
+}
+/*
+font-family: 'Genos', sans-serif;
+font-family: 'Krona One', sans-serif;
+font-family: 'Laila', serif;
+font-family: 'Ledger', serif;
+*/
+
+body{
+  background: rgba(35,39,41);
+  color:white;
+}
 
 
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.7rem;
+  font-family:'Laila', serif;
+}
 
+ul {
+  list-style-type:none;
+  display: flex;
+  margin-right: 1rem;
+  
+}
 
+li {
+  padding: 10px;
+  letter-spacing: 1.2px;
+}
 
+nav p {
+  color:#34B096;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+  font-size: 2rem;
+  margin-left:1rem;
+  font-weight: 600;
+  
+}
 
+/*-------------------------------------------------------------*/
 
+/* ----------------------  Header alanı şimdi  -------------------*/
 
+header {
+  
+  height: 60vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position:relative;  
 
+}
 
+header::before {
+  content:" ";
+  width:100%;
+  height: 100%;
+  position:absolute;
+  top:0;
+  left:0;
+  background-image: url("./images/backround.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  opacity: 0.2;
+  z-index: 1; /*bu kod, alanları katman olarak görür ve z index değeri ile siraya koyar. En küçük değer için en az, öndeki en büyük değeri alır*/
+}
+.inner {
+  width: 350px;
+  z-index: 2;
 
+  background-color: #171A1D;
+  border-radius: 300px 300px 0 0;
+}
 
+.inner .photo {
+  width: 350px;
+  height: 350px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
+}
 
+.inner .photo img {
+  width: 330px;
+  height: 330px;
+  border-radius: 300px;
+  border: 10px solid rgba(52, 176, 150, 0.50);
+  background: #34B096;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) inset, 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
 
+.name {
+  text-align: center;
+  font-family: 'Krona One', sans-serif;
+  line-height: 2rem;
+}
 
+.name h1 {
 
+  letter-spacing: 10px;
+  font-weight: 400;
+  font-size: 1.6rem;
 
+  
+}
 
+.name p {
+  font-size: 0.8rem;
+  letter-spacing: 1.5px;
 
+}
 
+.social {
+  display: flex;
+  justify-content: space-evenly;
+  color:black;
+  
+}
+i {
+  font-size: 2rem;
+  padding: 10px;
+}
 
+.aboutMe, .skills, .projects {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
+.aboutMe h2, .skills h2, .projects h2 {
+  font-family: 'Genos', sans-serif;
+  letter-spacing: 5px;
+  font-size: 2.5rem;
+  font-weight: 300;
 
+}
+
+.aboutMe p, .projects p {
+  font-family: 'Ledger', serif;
+  letter-spacing: 0.5px;
+
+}
+
+.aboutMe span, .projects span {
+  color:#34B096;
+}
+
+.personal {
+  display: flex;
+  justify-content: space-around;
+  font-family: 'Ledger', serif;
+
+}
+
+.detail {
+  margin-top: 1rem;
+  padding:1rem 0;
+  width: 50%;
+}
+.detail h3, .interest h3 {
+  font-family: 'Ledger', serif;
+  font-size: 1.5rem;
+  font-weight: 400;
+
+}
+
+.detailPart {
+  display: flex;
+  margin-top: 1rem;
+  
+}
+
+.leftDetail, .rightDetail {
+  margin-right: 2rem;
+
+}
+.leftDetail {
+
+  color:#34B096;
+}
+
+.interest {
+  width: 50%;
+  margin-top: 1rem;
+  padding: 1rem 0;
+}
+
+.interestIcons i{
+  width: 70px;
+  height: 70px;
+  text-align: center;
+  font-size: 2.5rem;
+  color:black;
+  background-color: rgba(0,0,0,0.3);
+  padding:10px;
+  margin: 0.5rem;
+  box-shadow: 1px 1px 2px black;
+}
+
+.interestIcons {
+  margin-top:1rem;
+}
+
+.aboutMe button {
+  background-color: inherit;
+  border:none;
+  border: 1px solid white;
+  padding:1rem 5rem;
+}
+
+.aboutMe button a {
+  text-decoration: none;
+  color:white
+}
+
+.skillPart {
+  margin-top: 1rem;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.skillsLeft, .skillsRight {
+  flex:1;
+  padding: 1rem;
+  
+}
+
+.skillPart h3 {
+  margin-bottom: 1rem;
+  font-family: 'Ledger', serif;
+  font-size: 1.5rem;
+  font-weight: 400;
+
+}
+
+.projectsPart {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: space-evenly;
+  gap:10px;
+  flex-wrap: wrap;
+}
+
+.projectsPart img {
+  width: 30%;
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  padding:1rem;
+  font-family: 'Laila', serif;
+  font-size: 0.8rem;
+  letter-spacing: 1.2px;
+
+}
 
 
 /*SKILLS BAR İÇİN YAZILAN KODLAR. https://codepen.io/milacarrera/pen/pEPoez sitesinden alındı.*/
